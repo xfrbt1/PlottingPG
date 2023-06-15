@@ -26,15 +26,15 @@ class Functions:
         ab = WIDTH-(WIDTH // 4) + (RADIUS * cos_a)
         ac = HEIGHT // 2 + (RADIUS * sin_a)
 
-        pygame.draw.line(self.game.screen, red_dark,
+        pygame.draw.line(self.game.screen, green,
                          circle_centre,
-                         [ab, ac], 3)
+                         [ab, ac], 2)
 
-        pygame.draw.circle(self.game.screen, red_dark,
+        pygame.draw.circle(self.game.screen, green,
                            circle_centre, 4)
 
-        pygame.draw.circle(self.game.screen, red_dark,
-                           (ab, ac), 3)
+        pygame.draw.circle(self.game.screen, green,
+                           (ab, ac), 5)
 
     def draw_x_projection(self):
         cos_a = math.cos(self.angle)
@@ -61,14 +61,14 @@ class Functions:
         ab = WIDTH-(WIDTH // 4) + (RADIUS * cos_a)
         ac = HEIGHT // 2 + (RADIUS * sin_a)
 
-        pygame.draw.line(self.game.screen, green,
+        pygame.draw.line(self.game.screen, red,
                          circle_centre,
                          [WIDTH-(WIDTH//4), ac], 4)
 
-        pygame.draw.circle(self.game.screen, green,
+        pygame.draw.circle(self.game.screen, red,
                            (WIDTH-(WIDTH//4), ac), 5)
 
-        pygame.draw.line(self.game.screen, green,
+        pygame.draw.line(self.game.screen, red,
                          [ab, ac],
                          [WIDTH-(WIDTH//4), ac], 2)
 

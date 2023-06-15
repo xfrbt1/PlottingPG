@@ -1,4 +1,4 @@
-fps = 10
+fps = 60
 caption = "PlottingPG"
 
 HEIGHT = 720
