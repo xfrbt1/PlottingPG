@@ -1,8 +1,8 @@
-fps = 60
+fps = 120
 caption = "PlottingPG"
 
-HEIGHT = 720
-WIDTH = 1080
+HEIGHT = 600
+WIDTH = 1000
 
 SC_F = HEIGHT / (WIDTH*100)
 
@@ -21,7 +21,7 @@ d_a = [WIDTH//2, WIDTH]
 d_b = [WIDTH//2, 0]
 
 # circle mesh
-circle_centre = (WIDTH-(WIDTH//4), HEIGHT//2)
+circle_centre = (WIDTH-(WIDTH//4), (HEIGHT//2))
 
 yc_a = [WIDTH-(WIDTH//4), 0]
 yc_b = [WIDTH-(WIDTH//4), WIDTH]

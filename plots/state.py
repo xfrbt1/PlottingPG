@@ -9,7 +9,9 @@ from trygonometry.functions import Functions
 class State:
     def __init__(self):
         pygame.init()
+        pygame.font.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
+        self.font = pygame.font.Font(None, 40)
         self.clock = pygame.time.Clock()
         self.new_state()
 
@@ -31,12 +33,19 @@ class State:
         self.clock.tick(fps)
         pygame.display.set_caption(f"{caption}")
 
+    def draw_txt(self):
+        if len(self.functions.values) > 0:
+            sin_txt = self.font.render(f'sin:{round(self.functions.values[-1][1], 2)} ', True, red_dark)
+            cos_txt = self.font.render(f'cos:{round(self.functions.values[-1][2], 2)} ', True, blue_dark)
+            self.screen.blit(sin_txt, (WIDTH - WIDTH // 4 + 10, 40))
+            self.screen.blit(cos_txt, (WIDTH - WIDTH // 4 + 10, 60))
+
     def draw(self):
         self.screen.fill(white)
         self.circle_mesh.draw()
         self.grid.draw()
         self.functions.draw()
-
+        self.draw_txt()
 
     def run(self):
         while True:
