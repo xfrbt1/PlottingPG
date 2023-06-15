@@ -2,7 +2,7 @@ fps = 120
 caption = "PlottingPG"
 
 HEIGHT = 600
-WIDTH = 1000
+WIDTH = 800
 
 SC_F = HEIGHT / (WIDTH*100)
 

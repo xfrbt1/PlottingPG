@@ -8,7 +8,7 @@ class Functions:
         self.game = game
 
         self.angle = ANGLE
-        self.values = []
+        self.values = list()
 
     def update(self):
         keys = pygame.key.get_pressed()
@@ -89,7 +89,7 @@ class Functions:
         if len(self.values) > 0:
             pygame.draw.line(self.game.screen, red,
                              [WIDTH - (WIDTH // 4), ac],
-                             [(WIDTH * SC_F) + abs(self.values[-1][0]) * 40, HEIGHT // 2 + self.values[-1][1] * RADIUS],
+                             [(WIDTH * SC_F) + abs(self.values[-1][0]) * 10, HEIGHT // 2 + self.values[-1][1] * RADIUS],
                              1)
 
     def draw_plot(self):
@@ -99,7 +99,7 @@ class Functions:
                                (WIDTH - WIDTH // 4 + i[2] * RADIUS, HEIGHT + i[0] * 10), 2)
             # sin
             pygame.draw.circle(self.game.screen, red,
-                               ((WIDTH * SC_F) + abs(i[0]) * 40, HEIGHT // 2 + i[1] * RADIUS), 2)
+                               ((WIDTH * SC_F) + abs(i[0]) * 10, HEIGHT // 2 + i[1] * RADIUS), 2)
 
     def draw(self):
         self.draw_x_projection()
