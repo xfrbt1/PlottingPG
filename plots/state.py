@@ -2,8 +2,8 @@ import sys
 import pygame
 from config import *
 from plots.grid import Grid
-from trygonometry.circle_mesh import Circle_Mesh
-from trygonometry.functions import Functions
+from trigonometry.circle_mesh import Circle_Mesh
+from trigonometry.functions import Functions
 
 
 class State:
