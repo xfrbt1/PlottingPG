@@ -15,16 +15,10 @@ class Functions:
 
         if keys[pygame.K_LEFT]:
             self.angle += 0.01
-            print("angle ", self.angle)
-            print("sin ", math.sin(self.angle))
-            print("cos ", math.cos(self.angle))
             self.values.append([self.angle, math.sin(self.angle), math.cos(self.angle)])
 
         if keys[pygame.K_RIGHT]:
             self.angle -= 0.01
-            print("angle ", self.angle)
-            print("sin ", math.sin(self.angle))
-            print("cos ", math.cos(self.angle))
             self.values.append([self.angle, math.sin(self.angle), math.cos(self.angle)])
 
     def draw_hypotenuse(self):
